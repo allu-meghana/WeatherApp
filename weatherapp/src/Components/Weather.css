@@ -1,0 +1,149 @@
+.weather {
+  place-self: center;
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-image 0.5s ease;
+  box-shadow: 10px 34px 30px rgba(0, 0, 0, 0.5);
+}
+
+.weather.sunny {
+  background-image: linear-gradient(45deg, #baa11f, #c46061);
+}
+.weather.rainy {
+  background-image: linear-gradient(45deg, #2c3e50, #3498db);
+}
+.weather.cloudy {
+  background-image: linear-gradient(45deg, #727779, #2c3e50);
+}
+.weather.snowy {
+  background-image: linear-gradient(45deg, #83a4d4, #b6fbff);
+}
+.weather.default {
+  background-image: linear-gradient(45deg, #2f4680, #500ae4);
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-bar input {
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 25px;
+  color: #626262;
+  background: #ebfffc;
+  font-size: 18px;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.search-bar input:focus {
+  border: 2px solid #500ae4;
+  box-shadow: 0 0 8px rgba(80, 10, 228, 0.6);
+}
+
+.search-bar .bx {
+  background: #ebfffc;
+  cursor: pointer;
+  width: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #626262;
+}
+
+.weather-icon {
+  margin: 30px 0;
+  width: 150px;
+}
+
+.temperature {
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.location {
+  color: #fff;
+  font-size: 40px;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 28px;
+  color: black;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-divider {
+  width: 90%;
+  border: 0;
+  border-top: 1px solid rgba(227, 220, 220, 0.818);
+  margin-top: 40px;
+}
+
+
+.weather-data {
+  width: 100%;
+  margin-top: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+    font-weight: 500;
+
+}
+
+.weather-data .col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 33px;
+    font-weight: 500;
+
+}
+
+.weather-data .col span {
+  display: block;
+  font-size: 26px;
+    font-weight: 500;
+
+
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 30px;
+}
+
+@keyframes spin{
+  to {
+    transform: rotate(360deg);
+}
+}
+.error {
+  color: #fff;
+  background-color: #ff4e50;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+}
